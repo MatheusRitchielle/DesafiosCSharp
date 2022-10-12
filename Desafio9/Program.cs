@@ -20,7 +20,7 @@ namespace MenoresMaiores
             foreach (int anoNasc in anoNascimento)
             {
                 int anoCorrente = (DateTime.Now.Year - anoNasc);
-                if ((DateTime.Now.Year - anoNasc) >= menor)
+                if ((DateTime.Now.Year - anoNasc) <= menor)
                 {
                     menores = menores + 1;
                 }
