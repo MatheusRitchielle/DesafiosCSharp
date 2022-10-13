@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio9", "Desafio9\Desafi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio10", "Desafio10\Desafio10.csproj", "{98737A57-8484-4A86-A867-24278FACDCBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{E17134B2-57BC-49E1-924B-173532A32999}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +69,6 @@ Global
 		{98737A57-8484-4A86-A867-24278FACDCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98737A57-8484-4A86-A867-24278FACDCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98737A57-8484-4A86-A867-24278FACDCBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E17134B2-57BC-49E1-924B-173532A32999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E17134B2-57BC-49E1-924B-173532A32999}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E17134B2-57BC-49E1-924B-173532A32999}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E17134B2-57BC-49E1-924B-173532A32999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

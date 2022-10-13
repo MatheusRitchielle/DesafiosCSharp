@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Passagem
+namespace Desafio7
 {
     class Program
     {
@@ -12,9 +12,12 @@ namespace Passagem
             Double valorPassagem;
             Double km;
 
-            Console.WriteLine("Qual a distância da sua viagem (Km): ");
+            Console.Write("Informe a distância da sua viagem (Km): ");
+            while (!Double.TryParse(Console.ReadLine(), out km))
+            {
+                Console.Write("Por favor, informe uma Km válida: ");
+            }
 
-            km = double.Parse(Console.ReadLine());
             if (km <= pontoDeConversao)
             {
                 valorPassagem = km * viagemCurta;

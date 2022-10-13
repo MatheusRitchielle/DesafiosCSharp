@@ -1,27 +1,28 @@
 ﻿using System;
 
-//Foram removidos os acentos do código para evitar erros do compilador >> https://www.programiz.com/csharp-programming/online-compiler/
-
-namespace OrdemDeApresentacao
+namespace Desafio6
 {
     class Program
     {
         static void Main(string[] args)
         {
             Random random = new Random();
-            int sorteado = random.Next(6);
+            int numSorteado = random.Next(6);
+            int resposta;
 
-            Console.WriteLine("O computador pensou em um numero de 0 a 5, qual voce acha que foi?");
-
-            int resposta = int.Parse(Console.ReadLine());
-
-            if (resposta == sorteado)
+            Console.WriteLine("O computador pensou em um número inteiro de 0 a 5, qual você acha que foi?");
+            while (!int.TryParse(Console.ReadLine(), out resposta))
             {
-                Console.WriteLine("Parabens, voce acertou!");
+                Console.Write("\nPor favor, tente um número inteiro: ");
+            }
+
+            if (resposta == numSorteado)
+            {
+                Console.WriteLine("\nParabéns, você acertou!");
             }
             else
             {
-                Console.WriteLine("Voce errou, o numero era " + sorteado);
+                Console.WriteLine("\nVocê errou, o número era " + numSorteado);
             }
         }
     }

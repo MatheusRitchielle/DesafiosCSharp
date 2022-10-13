@@ -1,25 +1,20 @@
 ﻿using System;
 
-//Foram removidos os acentos do código para evitar erros do compilador >> https://www.programiz.com/csharp-programming/online-compiler/
-
-namespace OrdemDeApresentacao
+namespace Desafio5
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             String[] alunos = new String[6];
 
-            Console.WriteLine("Digite o nome dos alunos:");
-            for (int qtdNomes = 0; qtdNomes < alunos.Length; qtdNomes++)
+            for (int i = 0; i < alunos.Length; i++)
             {
-                alunos[qtdNomes] = Console.ReadLine();
+                Console.Write("Digite o nome do aluno(a): ");
+                alunos[i] = Console.ReadLine();
             }
 
             Random random = new Random();
-            int sorteado = random.Next(alunos.Length);
-
             for (int i = 0; i < alunos.Length - 1; i++)
             {
                 int j = random.Next(i, alunos.Length);
@@ -28,10 +23,10 @@ namespace OrdemDeApresentacao
                 alunos[j] = temp;
             }
 
-            Console.WriteLine("A orde de apresentacao é: ");
+            Console.WriteLine("\nA ordem de apresentacao é: ");
             foreach (string ordem in alunos)
             {
-                Console.WriteLine(" > " + ordem);
+                Console.WriteLine( "- " + ordem);
             }
         }
     }

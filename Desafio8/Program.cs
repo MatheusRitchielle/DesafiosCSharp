@@ -6,8 +6,13 @@ namespace Passagem
     {
         static void Main(string[] args)
         {
+            DateTime data;
+
             Console.Write("Informe uma data: ");
-            DateTime data = DateTime.Parse(Console.ReadLine());
+            while (!DateTime.TryParse(Console.ReadLine(), out data))
+            {
+                Console.Write("\nInforme uma data por favor seguindo o padrão DD/MM/AAAA ou DD-MM-AAAA: ");
+            }
 
             if ((data.Year % 400 == 0) || ((data.Year % 4 == 0) && (data.Year % 100 != 0)))
             {

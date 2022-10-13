@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Desafio1
 {
@@ -10,17 +6,28 @@ namespace Desafio1
     {
         static void Main(string[] args)
         {
+            double nota1;
+            double nota2;
+            string msgErro = "Nesse campo só são aceitos números";
+
             Console.WriteLine("***** Calculadora de média *****\n");
-
             Console.Write("Informe a primeira nota: ");
-            double nota1 = double.Parse(Console.ReadLine());
 
-            Console.Write("Informe a segunda nota: ");
-            double nota2 = double.Parse(Console.ReadLine());
+            while(!Double.TryParse(Console.ReadLine(), out nota1))
+            {
+                Console.WriteLine("\n" + msgErro);
+                Console.Write("Informe a primeira nota: ");
+            }
+
+            Console.Write("\nInforme a segunda nota: ");
+            while (!Double.TryParse(Console.ReadLine(), out nota2))
+            {
+                Console.WriteLine("\n" + msgErro);
+                Console.Write("Informe a segunda nota: ");
+            }
 
             var media = (nota1 + nota2) / 2;
-
-            Console.WriteLine("A média de notas do aluno(a) é de: " + media);
+            Console.WriteLine("\n\nA média de notas do aluno(a) é de: " + media);
         }
     }
 }

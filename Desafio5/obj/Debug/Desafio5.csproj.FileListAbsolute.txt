@@ -1,0 +1,7 @@
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\bin\Debug\Desafio5.exe.config
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\bin\Debug\Desafio5.exe
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\bin\Debug\Desafio5.pdb
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\obj\Debug\Desafio5.csprojAssemblyReference.cache
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\obj\Debug\Desafio5.csproj.CoreCompileInputs.cache
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\obj\Debug\Desafio5.exe
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio5\obj\Debug\Desafio5.pdb

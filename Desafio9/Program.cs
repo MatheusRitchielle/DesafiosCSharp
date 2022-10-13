@@ -11,10 +11,14 @@ namespace MenoresMaiores
             int maiores = 0;
             int menor = 17;
 
-            for (int anos = 0; anos < anoNascimento.Length; anos++)
+            for (int i = 0; i < anoNascimento.Length; i++)
             {
                 Console.Write("Digite o ano de nascimento: ");
-                anoNascimento[anos] = int.Parse(Console.ReadLine());
+                while(!int.TryParse(Console.ReadLine(), out anoNascimento[i]))
+                {
+                    Console.Write("Por favor, informe apenas o ano: ");
+                }
+                //Colocar validação de ano maior que o atual.
             }
 
             foreach (int anoNasc in anoNascimento)

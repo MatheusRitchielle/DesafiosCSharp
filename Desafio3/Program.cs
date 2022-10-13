@@ -2,36 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 
-/* Foram removidos os acentos do código para evitar erros do compilador https://www.programiz.com/csharp-programming/online-compiler/ */
-
-namespace MaiorMenor
+namespace Desafio3
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             List<int> lista = new List<int> { 3, 19, 10, 22, 23, 9, 7, 32, 2, 16, 21, 13 };
-
             int maiorValor = lista.Max();
             int menorValor = lista.Min();
 
-            Console.WriteLine("O maior numero e: " + maiorValor);
-            Console.WriteLine("O menor numero e: " + menorValor);
-
+            Console.WriteLine("O maior numero é: " + maiorValor);
+            Console.WriteLine("O menor numero é: " + menorValor);
             int divisao = maiorValor / menorValor;
-
-            Console.WriteLine(maiorValor + " dividido por " + menorValor + " e igual a: " + divisao);
+            Console.WriteLine("\n" + maiorValor + " dividido por " + menorValor + " é igual a: " + divisao);
 
             if (lista.Contains(divisao))
             {
-                Console.WriteLine("Existe uma variavel na lista que tem o mesmo valor do resultado da divisao: " + divisao);
+                Console.WriteLine("\nExiste uma variável na lista que tem o mesmo valor do resultado da divisão: " + divisao);
             }
             else
             {
-                Console.WriteLine("Nao uma variável na lista que tem o mesmo valor do resultado da divisao" + divisao);
+                Console.WriteLine("Não uma variável na lista que tem o mesmo valor do resultado da divisão" + divisao);
             }
-
         }
     }
 }

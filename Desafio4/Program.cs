@@ -1,24 +1,22 @@
 ﻿using System;
 
-namespace SorteandoAlunos
+namespace Desafio4
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             String[] alunos = new String[6];
 
-            Console.WriteLine("Digite o nome dos alunos: ");
-            for (int qtdNomes = 0; qtdNomes < alunos.Length; qtdNomes++)
+            for (int i = 0; i < alunos.Length; i++)
             {
-                alunos[qtdNomes] = Console.ReadLine();
+                Console.Write("Digite o nome do aluno(a): ");
+                alunos[i] = Console.ReadLine().ToUpper();
             }
 
             Random random = new Random();
             int sorteado = random.Next(alunos.Length);
-            Console.WriteLine("\n\nO aluno(a) sorteado foi: " + alunos[sorteado]);
-
+            Console.WriteLine("\n\nO sorteado(a) foi: " + alunos[sorteado]);
         }
     }
 }

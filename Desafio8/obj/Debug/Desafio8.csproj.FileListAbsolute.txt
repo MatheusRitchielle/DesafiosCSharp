@@ -1,0 +1,6 @@
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\bin\Debug\Desafio8.exe.config
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\bin\Debug\Desafio8.exe
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\bin\Debug\Desafio8.pdb
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\obj\Debug\Desafio8.csproj.CoreCompileInputs.cache
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\obj\Debug\Desafio8.exe
+E:\Matheus\PROJETOS\C#\DesafiosCSharp\Desafio8\obj\Debug\Desafio8.pdb
