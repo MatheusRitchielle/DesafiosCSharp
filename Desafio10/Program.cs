@@ -11,9 +11,9 @@ namespace Desafio10
     {
         static void Main(string[] args)
         {
-            String[] nome = new String[5];
-            int[] idade = new int[5];
-            String[] CadastroPaises = new String[5];
+            List<String> nome = new List<string>();
+            List<int> idade = new List<int>();
+            List<String> pais = new List<String>();
 
             int bebe = 0;   // 0 - 2 anos
             int crianca = 0;// 3 - 12 anos
@@ -21,31 +21,29 @@ namespace Desafio10
             int adulto = 0; // 18 - 64 anos
             int idoso = 0;  // 65 anos em diante
 
-            for (int i = 0; i < nome.Length; i++)
+            for (int i = 0; i <= 14; i++)
             {
                 Console.Write("\n\nDigite o nome: ");
                 String cadastroNome = Console.ReadLine().ToUpper();
-               
                 if (nome.Contains(cadastroNome))
                 {
                     Console.WriteLine("Esse nome já consta em nossa base de dados, verifique por favor =) \n\n");
-                    /* Como existe um limite na quantidade de cadastros o contador "i" aumenta a cada cadastro 
-                     * o que permite uma sequência e uma "posicao", 
-                     * mas caso haja algum erro no meio do cadastro esse valor e subtraido por - 1, 
-                     * possibilitando utilizar a mesma posiçao onde o erro*/
-                    i = i - 1; 
+                    i = i - 1;
                 }
                 else
                 {
                     Console.Write("Digite sua idade: "); 
                     String cadastroIdade = Console.ReadLine();
-
-                    if (cadastroIdade.All(Char.IsDigit))// verifica se a string e composta por numeros
+                    
+                    // verifica se a string e composta por numeros
+                    if (cadastroIdade.All(Char.IsDigit))
                     {
                         Console.Write("Informe o seu Pais de origem: ");
-                        CadastroPaises[i] = Console.ReadLine().ToUpper();
-                        nome[i] = cadastroNome;
-                        idade[i] = int.Parse(cadastroIdade);
+                        String cadastroPais = Console.ReadLine().ToUpper();
+
+                        nome.Add(cadastroNome);
+                        idade.Add(int.Parse(cadastroIdade));
+                        pais.Add(cadastroPais);
                     }
                     else
                     {
@@ -56,6 +54,21 @@ namespace Desafio10
             }
 
             Console.WriteLine("\n\n ********** Nacionalidades ********** ");
+            //Verifica na lista "pais" todos os que são únicos.
+            var unicos = pais.GroupBy(p => p)
+                        .Where(g => g.Count() == 1)
+                        .Select(p => new { p.Key, Quantidade = p.Count() })
+                        .ToList();
+
+            Console.WriteLine(String.Join("\n", unicos));
+
+            //Verifica na lista "pais" todos os que estão duplicados e conta quantas vezes ele repete.
+            var duplicados = pais.GroupBy(p => p)
+                            .Where(g => g.Count() > 1)
+                            .Select(p => new {p.Key, Quantidade = p.Count() })
+                            .ToList();
+
+            Console.WriteLine(String.Join("\n", duplicados));
 
             Console.WriteLine("\n\n ********** Faixa etária ********** ");
             foreach (int fxEtaria in idade)
@@ -104,25 +117,6 @@ namespace Desafio10
             }
 
             Console.ReadKey();
-        }
-
-        public enum paises {
-
-            ALEMANHA,
-            AUSTRALIA,
-            CANADA,
-            ESTADOS_UNIDOS,
-            FRANCA,
-            ITALIA, 
-            JAPAO,
-            ARGENTINA,
-            BRASIL,
-            CHINA, 
-            TURQUIA,
-            RUSSIA,
-            MEXICO,
-            INDONESIA,
-            INDIA,
         }
     }
 }
