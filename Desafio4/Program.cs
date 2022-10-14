@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Um professor quer sortear um dos seus seis alunos para apagar o quadro. 
+ Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.*/
+
+using System;
 
 namespace Desafio4
 {

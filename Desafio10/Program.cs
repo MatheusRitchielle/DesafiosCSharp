@@ -1,9 +1,14 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿/*Faça um programa que recebe os seguintes dados de pessoas:
+Nome, Idade, Nacionalidade
+
+- Inserir 15 pessoas na sua lista.
+- O atributo Nome deverá ser único, ou seja, a lista não poderá ter dois registros com o mesmo nome, mesmo que para idades ou nacionalidades diferentes.
+- retornar a lista de nacionalidade com o respectivo somatório de pessoas; e
+- retornar a lista das pessoas agrupadas na faixa etária em cada uma se enquadra (bebe, criança, ..., idoso).*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Desafio10
 {
@@ -15,6 +20,7 @@ namespace Desafio10
             List<int> idade = new List<int>();
             List<String> pais = new List<String>();
 
+            int cadastroIdade;
             int bebe = 0;   // 0 - 2 anos
             int crianca = 0;// 3 - 12 anos
             int jovem = 0;  // 13 - 17 anos
@@ -23,33 +29,26 @@ namespace Desafio10
 
             for (int i = 0; i <= 14; i++)
             {
-                Console.Write("\n\nDigite o nome: ");
+                Console.Write("\nDigite o nome: ");
                 String cadastroNome = Console.ReadLine().ToUpper();
                 if (nome.Contains(cadastroNome))
                 {
-                    Console.WriteLine("Esse nome já consta em nossa base de dados, verifique por favor =) \n\n");
+                    Console.WriteLine("Esse nome já consta em nossa base de dados, verifique por favor =)");
                     i = i - 1;
                 }
                 else
                 {
                     Console.Write("Digite sua idade: "); 
-                    String cadastroIdade = Console.ReadLine();
+                    while(!int.TryParse(Console.ReadLine(), out cadastroIdade))
+                    {
+                        Console.Write("Verifique os dados e informe novamente por favor!" +
+                            "\n\nDigite sua idade: ");
+                    }
                     
-                    // verifica se a string e composta por numeros
-                    if (cadastroIdade.All(Char.IsDigit))
-                    {
-                        Console.Write("Informe o seu Pais de origem: ");
-                        String cadastroPais = Console.ReadLine().ToUpper();
-
-                        nome.Add(cadastroNome);
-                        idade.Add(int.Parse(cadastroIdade));
-                        pais.Add(cadastroPais);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nesse campo só são aceitos numeros, preecha todo o cadastro novamente!");
-                        i = i - 1;
-                    }
+                    Console.Write("Informe o seu Pais de origem: ");
+                    pais.Add(Console.ReadLine().ToUpper());
+                    nome.Add(cadastroNome);
+                    idade.Add(cadastroIdade);
                 }
             }
 

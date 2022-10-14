@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*Faça um programa que lê lista de valores numéricos e retorna a maior, a menor, 
+ * e o resultado da divisão destas duas variáveis retornadas, 
+ * e informa se existe alguma outra variável na lista, que tem o mesmo valor do resultado da divisão. 
+ * Considere a seguinte lista para seu exercício: 3,19,10,22,23,9,7,32,2,16,21,13*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
